@@ -6,7 +6,7 @@ function AddContacts() {
   const { register, handleSubmit } = useForm();
   const [message, setMessage] = useState("");
   const onSubmit = (data) => {
-    fetch("https://task-backend-ecru-two.vercel.app/api/v1/contact/create-contact", {
+    fetch("https://task-backend-iota.vercel.app/api/v1/contact/create-contact", {
             method: "post",
             headers: {
               "content-type": "application/json",

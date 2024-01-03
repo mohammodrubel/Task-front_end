@@ -16,7 +16,7 @@ function AllContacts() {
   } = useQuery({
     queryKey: ["contact"],
     queryFn: () =>
-      fetch("https://task-backend-ecru-two.vercel.app/api/v1/contact/").then((res) => res.json()),
+      fetch("https://task-backend-iota.vercel.app/api/v1/contact/").then((res) => res.json()),
   });
 
   if (isPending) {
@@ -34,7 +34,7 @@ function AllContacts() {
 
   
   const toggleFvrt = (id,status)=>{
-  fetch(`https://task-backend-ecru-two.vercel.app/api/v1/contact/toggle/${id}`, {
+  fetch(`https://task-backend-iota.vercel.app/api/v1/contact/toggle/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

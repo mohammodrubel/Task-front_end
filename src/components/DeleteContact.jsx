@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function DeleteContact({id,refetch}) {
 
     const deleteData = (id)=>{
-        fetch(`https://task-backend-ecru-two.vercel.app/api/v1/contact/${id}`,{
+        fetch(`https://task-backend-iota.vercel.app/api/v1/contact/${id}`,{
             method:'DELETE'
         })
         .then(res => res.json())

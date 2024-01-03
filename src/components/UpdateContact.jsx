@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function UpdateContact({ findData ,refetch}) {
   const [formData, setFormData] = useState({
@@ -20,7 +20,7 @@ function UpdateContact({ findData ,refetch}) {
     e.preventDefault();
 
     try {
-      const response = await fetch(`https://task-backend-ecru-two.vercel.app/api/v1/contact/${findData._id}`, {
+      const response = await fetch(`https://task-backend-iota.vercel.app/api/v1/contact/${findData._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
