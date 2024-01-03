@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 function DeleteContact({id,refetch}) {
 
     const deleteData = (id)=>{
-        fetch(`http://localhost:9000/api/v1/contact/${id}`,{
+        fetch(`https://task-backend-ecru-two.vercel.app/api/v1/contact/${id}`,{
             method:'DELETE'
         })
         .then(res => res.json())

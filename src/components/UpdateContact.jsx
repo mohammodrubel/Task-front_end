@@ -20,7 +20,7 @@ function UpdateContact({ findData ,refetch}) {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:9000/api/v1/contact/${findData._id}`, {
+      const response = await fetch(`https://task-backend-ecru-two.vercel.app/api/v1/contact/${findData._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

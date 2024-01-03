@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import React, { useState } from "react";
+import "../Style/AllCard.css";
 import DeleteContact from "../components/DeleteContact";
 import UpdateContact from "../components/UpdateContact";
-import { useQuery } from "@tanstack/react-query";
-import "../Style/AllCard.css";
 
 function AllContacts() {
   const [deleteId, setDeleteId] = useState("");
@@ -16,7 +16,7 @@ function AllContacts() {
   } = useQuery({
     queryKey: ["contact"],
     queryFn: () =>
-      fetch("http://localhost:9000/api/v1/contact/").then((res) => res.json()),
+      fetch("https://task-backend-ecru-two.vercel.app/api/v1/contact/").then((res) => res.json()),
   });
 
   if (isPending) {
@@ -34,7 +34,7 @@ function AllContacts() {
 
   
   const toggleFvrt = (id,status)=>{
-  fetch(`http://localhost:9000/api/v1/contact/toggle/${id}`, {
+  fetch(`https://task-backend-ecru-two.vercel.app/api/v1/contact/toggle/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
